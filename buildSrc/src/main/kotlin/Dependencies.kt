@@ -28,6 +28,15 @@ object Dependencies {
         val core = "com.comphenix.protocol:ProtocolLib:$version"
     }
 
+    object Exposed {
+        val version = "0.31.1"
+        val repository = "https://dl.bintray.com/kotlin/exposed"
+        val core = "org.jetbrains.exposed:exposed-core:$version"
+        val dao = "org.jetbrains.exposed:exposed-dao:$version"
+        val jdbc = "org.jetbrains.exposed:exposed-jdbc:$version"
+        val jodatime = "org.jetbrains.exposed:exposed-jodatime:$version"
+    }
+
     object JUnit {
         val core = "org.junit.jupiter:junit-jupiter:5.5.2"
     }
@@ -36,5 +45,10 @@ object Dependencies {
         val version = "0.25.0"
         val repository = "https://hub.spigotmc.org/nexus/content/repositories/public/"
         val core = "com.github.seeseemelk:MockBukkit-v1.16:$version"
+    }
+
+    object Sqlite {
+        val version = "3.21.0"
+        val jdbc = "org.xerial:sqlite-jdbc:$version"
     }
 }

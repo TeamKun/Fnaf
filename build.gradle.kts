@@ -15,6 +15,7 @@ repositories {
     maven(Dependencies.SonaType.repository)
     maven(Dependencies.ProtocolLib.repository)
     maven(Dependencies.MockBukkit.repository)
+    maven(Dependencies.Exposed.repository)
 }
 
 dependencies {
@@ -25,8 +26,14 @@ dependencies {
     compileOnly(Dependencies.ProtocolLib.core) {
         exclude("com.comphenix.executors", "BukkitExecutors")
     }
+    compile(Dependencies.Exposed.core)
+    compile(Dependencies.Exposed.dao)
+    compile(Dependencies.Exposed.jdbc)
+    compile(Dependencies.Exposed.jodatime)
+    compile(Dependencies.Sqlite.jdbc)
     testCompile(Dependencies.JUnit.core)
     testCompile(Dependencies.MockBukkit.core)
+    compileOnly(files("libs/RxSpigot-0.1.0.jar"))
 }
 
 buildscript {
